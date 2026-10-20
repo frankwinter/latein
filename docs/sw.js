@@ -1,4 +1,4 @@
-const CACHE = 'latein-v1';
+const CACHE = 'latein-v2';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
   ...Array.from({ length: 9 }, (_, i) => `data/0${i + 1}.json`)];
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())));
